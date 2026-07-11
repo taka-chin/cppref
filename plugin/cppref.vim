@@ -218,7 +218,4 @@ endfunction
 
 command! -nargs=? -complete=file CppRef call s:OpenReference(<q-args>)
 
-augroup cppref_keymap
-  autocmd!
-  autocmd FileType c,cpp nnoremap <silent> <buffer> <Leader>k :CppRef<CR>
-augroup END
+nnoremap <silent> <Plug>(cppref-open) :CppRef<CR>
